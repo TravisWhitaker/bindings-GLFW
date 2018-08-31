@@ -25,6 +25,9 @@
 
     #define GLFW_EXPOSE_NATIVE_EGL
 
+    #warning "__linux__ is defined! Siiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiick."
+
+
     #if defined(BINDINGS_GLFW_USE_X11)
       #define GLFW_EXPOSE_NATIVE_X11
       #define GLFW_EXPOSE_NATIVE_GLX
@@ -687,6 +690,10 @@ c'glfwGetMirWindow :: Ptr C'GLFWwindow -> IO (Ptr mir_surface)
 c'glfwGetMirWindow =
   error $ "c'glfwGetMirWindow undefined! -- "
        ++ "Did you use the wrong glfw3native API?"
+#endif
+
+#ifdef(GLFW_EXPOSE_NATIVE_EGL)
+#warning "Stillllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllll got it baaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy."
 #endif
 
 #if defined(GLFW_EXPOSE_NATIVE_EGL)
