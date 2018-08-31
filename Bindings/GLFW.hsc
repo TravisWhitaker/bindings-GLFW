@@ -692,11 +692,12 @@ c'glfwGetMirWindow =
        ++ "Did you use the wrong glfw3native API?"
 #endif
 
-#ifdef(GLFW_EXPOSE_NATIVE_EGL)
+#if defined(GLFW_EXPOSE_NATIVE_EGL)
 #warning "Stillllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllll got it baaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy."
 #endif
 
 #if defined(GLFW_EXPOSE_NATIVE_EGL)
+#warning "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
 #ccall glfwGetEGLDisplay , IO (Ptr ())
 #ccall glfwGetEGLContext , Ptr <GLFWwindow> -> IO (Ptr ())
 #ccall glfwGetEGLSurface , Ptr <GLFWwindow> -> IO (Ptr ())
